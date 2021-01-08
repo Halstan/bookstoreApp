@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">BibliotecaRikkazo</string>
+    <string name="title_libros">Libros</string>
+    <string name="title_prestamos">Prestamos</string>
+    <string name="title_perfil">Perfil</string>
+    <string name="valetlogin">Ingrese su usuario</string>
+    <string name="valetpassword">Ingrese su contraseña</string>
+    <string name="valbtningresar">Ingresar</string>
+    <string name="valbtncrearcuenta">Crear Cuenta</string>
+    <string name="chbGuardarContrasenha">¿Guardar contraseña?</string>
+</resources>
