@@ -1,5 +1,6 @@
 package edu.pe.idat.bibliotecarikkazo.model;
 
+import edu.pe.idat.bibliotecarikkazo.service.AlquilerService;
 import edu.pe.idat.bibliotecarikkazo.service.LibroService;
 import edu.pe.idat.bibliotecarikkazo.service.LoginService;
 import okhttp3.OkHttpClient;
@@ -31,6 +32,11 @@ public class ApiClient {
     public static LibroService libroService(){
 
         return getretrofit().create(LibroService.class);
+    }
+
+    public static AlquilerService alquilerService(){
+
+        return getretrofit().create(AlquilerService.class);
     }
 
 }

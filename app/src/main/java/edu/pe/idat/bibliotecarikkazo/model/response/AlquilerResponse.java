@@ -1,18 +1,15 @@
 package edu.pe.idat.bibliotecarikkazo.model.response;
 
 import edu.pe.idat.bibliotecarikkazo.model.Alquiler;
+import lombok.Data;
+import lombok.ToString;
 
 import java.util.ArrayList;
 
+@Data
+@ToString
 public class AlquilerResponse {
 
     private ArrayList<Alquiler> alquiler;
 
-    public ArrayList<Alquiler> getAlquiler() {
-        return alquiler;
-    }
-
-    public void setAlquiler(ArrayList<Alquiler> alquiler) {
-        this.alquiler = alquiler;
-    }
 }

@@ -1,7 +1,12 @@
 package edu.pe.idat.bibliotecarikkazo.model;
 
+import lombok.Data;
+import lombok.ToString;
+
 import java.util.Date;
 
+@Data
+@ToString
 public class Alquiler {
 
     private Long idAlquiler;
@@ -16,51 +21,4 @@ public class Alquiler {
 
     private Libro libro;
 
-    public Long getIdAlquiler() {
-        return idAlquiler;
-    }
-
-    public void setIdAlquiler(Long idAlquiler) {
-        this.idAlquiler = idAlquiler;
-    }
-
-    public Date getFechaRetorno() {
-        return fechaRetorno;
-    }
-
-    public void setFechaRetorno(Date fechaRetorno) {
-        this.fechaRetorno = fechaRetorno;
-    }
-
-    public Date getFechaCreacion() {
-        return fechaCreacion;
-    }
-
-    public void setFechaCreacion(Date fechaCreacion) {
-        this.fechaCreacion = fechaCreacion;
-    }
-
-    public Boolean getEstado() {
-        return estado;
-    }
-
-    public void setEstado(Boolean estado) {
-        this.estado = estado;
-    }
-
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
-
-    public Libro getLibro() {
-        return libro;
-    }
-
-    public void setLibro(Libro libro) {
-        this.libro = libro;
-    }
 }

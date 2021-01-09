@@ -1,14 +1,12 @@
 package edu.pe.idat.bibliotecarikkazo.model.response;
 
+import lombok.Data;
+import lombok.ToString;
+
+@Data
+@ToString
 public class LoginResponse {
 
     private String jwt;
 
-    public String getJwt() {
-        return jwt;
-    }
-
-    public void setJwt(String jwt) {
-        this.jwt = jwt;
-    }
 }
