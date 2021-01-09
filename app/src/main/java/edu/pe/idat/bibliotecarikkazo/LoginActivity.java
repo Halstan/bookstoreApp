@@ -13,7 +13,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.auth0.android.jwt.JWT;
-import edu.pe.idat.bibliotecarikkazo.model.ApiClient;
+import edu.pe.idat.bibliotecarikkazo.framework.ApiClient;
 import edu.pe.idat.bibliotecarikkazo.model.Usuario;
 import edu.pe.idat.bibliotecarikkazo.model.request.LoginRequest;
 import edu.pe.idat.bibliotecarikkazo.model.response.LoginResponse;
@@ -59,7 +59,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 if (TextUtils.isEmpty(txtUsername.getText().toString()) || TextUtils.isEmpty(txtPassword.getText().toString())) {
-                    Toast.makeText(LoginActivity.this, "Credenciales incorrectas", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Complete los campos", Toast.LENGTH_SHORT).show();
                 } else {
                     // LOGUEAR
                     LoginActivity.this.login();
@@ -99,7 +99,7 @@ public class LoginActivity extends AppCompatActivity {
                     }, 700);
 
                 } else {
-                    Toast.makeText(LoginActivity.this, "Falló el inicio de sesión", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Credenciales incorrectas", Toast.LENGTH_SHORT).show();
                 }
             }
 

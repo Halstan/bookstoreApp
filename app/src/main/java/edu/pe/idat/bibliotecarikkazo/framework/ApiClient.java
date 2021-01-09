@@ -1,4 +1,4 @@
-package edu.pe.idat.bibliotecarikkazo.model;
+package edu.pe.idat.bibliotecarikkazo.framework;
 
 import edu.pe.idat.bibliotecarikkazo.service.AlquilerService;
 import edu.pe.idat.bibliotecarikkazo.service.LibroService;

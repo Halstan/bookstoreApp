@@ -1,7 +1,6 @@
 package edu.pe.idat.bibliotecarikkazo.service;
 
 import edu.pe.idat.bibliotecarikkazo.model.Alquiler;
-import edu.pe.idat.bibliotecarikkazo.model.response.AlquilerResponse;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Header;

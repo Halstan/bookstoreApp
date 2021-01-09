@@ -33,6 +33,6 @@ public class Usuario {
 
     private List<Alquiler> alquileres;
 
-    private Set<String> roles;
+    private Set<Rol> roles;
 
 }
