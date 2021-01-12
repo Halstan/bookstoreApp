@@ -11,6 +11,6 @@ import java.util.List;
 public interface AlquilerService {
 
     @GET("/biblioteca/api/alquileres/usuario/{username}")
-    Call<List<Alquiler>> findByUsername(@Path("username") String username, @Header("Authorization") String lang);
+    Call<List<Alquiler>> findByUsername(@Path("username") String username, @Header("Authorization") String token);
 
 }

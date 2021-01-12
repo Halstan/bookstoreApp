@@ -8,4 +8,22 @@
     <string name="valbtningresar">Ingresar</string>
     <string name="valbtncrearcuenta">Crear Cuenta</string>
     <string name="chbGuardarContrasenha">¿Guardar contraseña?</string>
+    <string name="hntNombre">Introduzca su nombre</string>
+    <string name="hntApellido">Introduzca su apellido</string>
+    <string name="lblUsername">Nombre de usuario:</string>
+    <string name="hntUsername">Nombre de usuario</string>
+    <string name="hntCorreo">Correo</string>
+    <string name="lblCorreo">Correo</string>
+    <string name="hntPassword">Introduzca contraseña</string>
+    <string name="lblPassword">Contraseña</string>
+    <string name="lblConfirmPassword">Confirmar contraseña</string>
+    <string name="hntConfirmPassword">Vuelva a introducir contraseña</string>
+    <string name="btnActualizarPerfil">Actualizar</string>
+
+    <string-array name="gender">
+        <item>Seleccione sexo:</item>
+        <item>Masculino</item>
+        <item>Femenino</item>
+    </string-array>
+
 </resources>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    android:background="@color/colorPrimaryDark">
+
+    <TextView
+        android:text="REGISTRO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView6"
+        android:textColor="@color/colorAccent"
+        android:textSize="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp"/>
+    <EditText
+        android:layout_width="289dp"
+        android:layout_height="48dp"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/edtNombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        android:layout_marginTop="40dp"
+        android:hint="Introduzca su nombre"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@color/HintColor"
+        android:backgroundTint="@color/colorPrimary"/>
+    <EditText
+        android:layout_width="289dp"
+        android:layout_height="48dp"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/edtApellido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtNombre"
+        android:layout_marginTop="30dp"
+        android:hint="Introduzca su apellido"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@color/HintColor"
+        android:backgroundTint="@color/colorPrimary"/>
+    <EditText
+        android:layout_width="289dp"
+        android:layout_height="48dp"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/edtUsername"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtApellido"
+        android:layout_marginTop="30dp"
+        android:hint="Introduzca nombre de usuario"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@color/HintColor"
+        android:backgroundTint="@color/colorPrimary"/>
+    <EditText
+        android:layout_width="289dp"
+        android:layout_height="48dp"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/edtCorreo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtUsername"
+        android:layout_marginTop="30dp"
+        android:hint="Introduzca su correo"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@color/HintColor"
+        android:backgroundTint="@color/colorPrimary"/>
+    <EditText
+        android:layout_width="289dp"
+        android:layout_height="48dp"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/edtPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtCorreo"
+        android:layout_marginTop="30dp"
+        android:hint="Introduzca su contraseña"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@color/HintColor"
+        android:backgroundTint="@color/colorPrimary"/>
+    <EditText
+        android:layout_width="289dp"
+        android:layout_height="48dp"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/edtConfirmPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:hint="Vuelve a introducir tu contraseña"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@color/HintColor"
+        android:backgroundTint="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@+id/edtPassword"
+        android:layout_marginTop="30dp"/>
+    <Button
+        android:text="Cancelar"
+        android:id="@+id/btnCancelar"
+        android:layout_width="132dp"
+        android:layout_height="43dp"
+        android:background="@drawable/btn_rounded"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="40dp"/>
+    <Button
+        android:text="Registrar"
+        android:id="@+id/btnRegistrar"
+        android:layout_width="132dp"
+        android:layout_height="43dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/btn_rounded"
+        app:layout_constraintStart_toEndOf="@+id/btnCancelar"
+        android:layout_marginEnd="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="40dp"/>
+    <TextView
+        android:text="Nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/edtNombre"
+        android:layout_marginEnd="237dp"
+        android:textColor="@color/colorPrimary"/>
+    <TextView
+        android:text="Apellido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView9"
+        app:layout_constraintBottom_toTopOf="@+id/edtApellido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="235dp"
+        android:textColor="@color/colorPrimary"/>
+    <TextView
+        android:text="Usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView10"
+        app:layout_constraintBottom_toTopOf="@+id/edtUsername"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="237dp"
+        android:textColor="@color/colorPrimary"/>
+    <TextView
+        android:text="Correo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:id="@+id/textView11"
+        app:layout_constraintBottom_toTopOf="@+id/edtCorreo"
+        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="240dp"
+        android:textColor="@color/colorPrimary"/>
+    <TextView
+        android:text="Contraseña"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:id="@+id/textView12"
+        app:layout_constraintBottom_toTopOf="@+id/edtPassword"
+        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="210dp"
+        android:textColor="@color/colorPrimary"/>
+    <TextView
+        android:text="Vuelva a introducir contraseña"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:id="@+id/textView13"
+        app:layout_constraintBottom_toTopOf="@+id/edtConfirmPassword"
+        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="90dp"
+        android:textColor="@color/colorPrimary"/>
+    <Spinner
+        android:entries="@array/gender"
+        android:layout_width="289dp"
+        android:layout_height="48dp"
+        android:id="@+id/cboSexo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtConfirmPassword"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:text="Sexo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView14"
+        app:layout_constraintBottom_toTopOf="@+id/cboSexo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="253dp"
+        android:textColor="@color/colorPrimary"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
