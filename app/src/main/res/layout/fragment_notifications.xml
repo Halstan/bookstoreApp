@@ -223,14 +223,15 @@
     </ScrollView>
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="113dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="16dp"
+        android:id="@+id/btnActualizar"
+        android:layout_width="117dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="34dp"
         android:background="@drawable/btn_rounded"
         android:text="@string/btnActualizarPerfil"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.841"
         app:layout_constraintStart_toEndOf="@+id/lblUsuario"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -21,4 +21,7 @@ public class Alquiler {
 
     private Libro libro;
 
+    private DetalleAlquiler detalleAlquiler;
+
+
 }

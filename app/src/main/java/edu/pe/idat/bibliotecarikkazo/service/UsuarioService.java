@@ -9,7 +9,7 @@ public interface UsuarioService {
     @GET("/biblioteca/api/usuarios/username/{username}")
     Call<Usuario> findByUsername(@Path("username") String username, @Header("Authorization") String token);
 
-    @POST("/biblioteca/api/usuarios")
+    @PUT("/biblioteca/api/usuarios")
     Call<Usuario> updatePerfil(@Body Usuario usuario, @Header("Authorization") String token);
 
 }
