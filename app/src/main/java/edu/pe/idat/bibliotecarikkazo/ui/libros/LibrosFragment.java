@@ -9,12 +9,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import edu.pe.idat.bibliotecarikkazo.R;
 import edu.pe.idat.bibliotecarikkazo.adapter.ListLibroAdapter;
 import edu.pe.idat.bibliotecarikkazo.framework.ApiClient;
 import edu.pe.idat.bibliotecarikkazo.model.Libro;
+import org.jetbrains.annotations.NotNull;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -56,7 +58,7 @@ public class LibrosFragment extends Fragment {
             }
 
             @Override
-            public void onFailure(Call<List<Libro>> call, Throwable t) {
+            public void onFailure(@NotNull Call<List<Libro>> call, @NotNull Throwable t) {
                 Log.e("LIBROS", "onFailure: " + t.getMessage());
             }
         });

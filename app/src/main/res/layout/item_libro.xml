@@ -2,58 +2,63 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="#1E1E1E"
+    android:layout_margin="20dp">
 
     <ImageView
-        android:id="@+id/fotoImageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:id="@+id/portadaImageView"
+        android:layout_width="96dp"
+        android:layout_height="133dp"
+        android:scaleType="fitXY"
+        android:paddingTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent"/>
     <TextView
         android:id="@+id/nombreTextView"
         android:layout_width="162dp"
         android:layout_height="35dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:text="@string/app_name"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/colorPrimary"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/fotoImageView"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/portadaImageView"
+        android:layout_marginTop="5dp"
+        android:textAlignment="center"
+        />
     <TextView
         android:id="@+id/autorTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textColor="@color/colorAccent"
-        android:layout_marginBottom="16dp"
         android:ellipsize="end"
         android:maxLines="4"
         android:text="@string/app_name"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombreTextView"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/nombreTextView"
-        app:layout_constraintTop_toBottomOf="@+id/nombreTextView" />
-
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="130dp"
+        android:layout_marginStart="130dp"
+        android:textAlignment="center"  />
     <TextView
         android:id="@+id/estadoTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textColor="@color/colorAccent"
-        android:layout_marginBottom="16dp"
-        android:ellipsize="end"
         android:maxLines="4"
         android:text="@string/app_name"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/autorTextView"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/autorTextView"
-        app:layout_constraintTop_toBottomOf="@+id/autorTextView" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="130dp"
+        android:layout_marginEnd="130dp"
+        android:textAlignment="center"  />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

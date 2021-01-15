@@ -15,7 +15,7 @@ public class Alquiler {
 
     private Date fechaCreacion;
 
-    private Boolean estado;
+    private boolean estado;
 
     private Usuario usuario;
 

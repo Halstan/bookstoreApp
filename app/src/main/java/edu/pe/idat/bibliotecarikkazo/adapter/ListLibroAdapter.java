@@ -1,11 +1,11 @@
 package edu.pe.idat.bibliotecarikkazo.adapter;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
@@ -29,10 +29,21 @@ public class ListLibroAdapter extends RecyclerView.Adapter<ListLibroAdapter.View
         public ViewHolder(@NonNull @NotNull View itemView) {
             super(itemView);
 
-            portadaImageView = itemView.findViewById(R.id.fotoImageView);
+            portadaImageView = itemView.findViewById(R.id.portadaImageView);
             nombreTextView = itemView.findViewById(R.id.nombreTextView);
             autorTextView = itemView.findViewById(R.id.autorTextView);
             estadoTextView = itemView.findViewById(R.id.estadoTextView);
+            
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int pos = getAdapterPosition();
+                    if (pos != RecyclerView.NO_POSITION) {
+                        Libro clickedDataItem = libros.get(pos);
+                        Toast.makeText(v.getContext(), "Has clickeado " + clickedDataItem.getNombreLibro(), Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
 
         }
     }

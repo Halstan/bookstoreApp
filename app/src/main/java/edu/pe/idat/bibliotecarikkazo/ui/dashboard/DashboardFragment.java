@@ -9,9 +9,14 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import edu.pe.idat.bibliotecarikkazo.R;
+import edu.pe.idat.bibliotecarikkazo.adapter.ListAlquilerAdapter;
 import edu.pe.idat.bibliotecarikkazo.model.Alquiler;
 import edu.pe.idat.bibliotecarikkazo.framework.ApiClient;
+import org.jetbrains.annotations.NotNull;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -20,6 +25,9 @@ import java.util.List;
 import java.util.Objects;
 
 public class DashboardFragment extends Fragment {
+
+    private RecyclerView recyclerView;
+    private ListAlquilerAdapter listAlquilerAdapter;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -31,6 +39,7 @@ public class DashboardFragment extends Fragment {
         SharedPreferences preferences = Objects.requireNonNull(getActivity()).getSharedPreferences("credenciales", 0);
         String username = preferences.getString("username", "");
         String token = preferences.getString("token", "");
+        recyclerView = view.findViewById(R.id.recyclerView2);
         getAlquileresByUsername(username, "Bearer " + token);
         super.onViewCreated(view, savedInstanceState);
 
@@ -42,14 +51,17 @@ public class DashboardFragment extends Fragment {
             @Override
             public void onResponse(Call<List<Alquiler>> call, Response<List<Alquiler>> response) {
                 if (response.isSuccessful()){
-                    List<Alquiler> alquilers = response.body();
-                    System.out.println(alquilers);
+                    listAlquilerAdapter = new ListAlquilerAdapter(response.body());
+                    RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
+                    recyclerView.addItemDecoration(new DividerItemDecoration(Objects.requireNonNull(getActivity()), LinearLayoutManager.VERTICAL));
+                    recyclerView.setAdapter(listAlquilerAdapter);
+                    recyclerView.setLayoutManager(layoutManager);
                 } else Log.e("ALQUILERES", " onResponse: " + response.errorBody());
 
             }
 
             @Override
-            public void onFailure(Call<List<Alquiler>> call, Throwable t) {
+            public void onFailure(@NotNull Call<List<Alquiler>> call, @NotNull Throwable t) {
                 Log.e("ALQUILERES", "onFailure: " + t.getMessage());
             }
         });
