@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity"
+    android:background="@color/colorPrimaryDark">
+
+    <ImageView
+        android:id="@+id/ivPortada"
+        android:layout_width="249dp"
+        android:layout_height="309dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ivPortada"
+        android:paddingTop="30dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvNombre"
+                android:layout_width="356dp"
+                android:layout_height="79dp"
+                android:text="Nombre de Libro"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:text="Autor:"
+                android:textSize="15dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView15"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="60dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvNombre"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:text="Texto Autor"
+                android:textSize="15dp"
+                android:textColor="@color/colorAccent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvAutor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvNombre"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="60dp"/>
+            <TextView
+                android:text="Editorial:"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView17"
+                app:layout_constraintTop_toBottomOf="@+id/textView15"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="60dp"/>
+            <TextView
+                android:text="Texto Editorial"
+                android:textSize="15dp"
+                android:textColor="@color/colorAccent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvEditorial"
+                app:layout_constraintTop_toBottomOf="@+id/tvAutor"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="60dp"/>
+            <TextView
+                android:text="Categoria:"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView19"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView17"
+                android:layout_marginStart="60dp"/>
+            <TextView
+                android:text="Texto Categoria"
+                android:textSize="15dp"
+                android:textColor="@color/colorAccent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvCategoria"
+                app:layout_constraintTop_toBottomOf="@+id/tvEditorial"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="60dp"/>
+            <TextView
+                android:text="Idioma:"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView21"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView19"
+                android:layout_marginStart="60dp"/>
+            <TextView
+                android:text="Texto Idioma"
+                android:textSize="15dp"
+                android:textColor="@color/colorAccent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvIdioma"
+                app:layout_constraintTop_toBottomOf="@+id/tvCategoria"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="60dp"/>
+
+            <TextView
+                android:text="Precio:"
+                android:textSize="15dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView23"
+                app:layout_constraintTop_toBottomOf="@+id/textView21"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="60dp"
+                />
+            <TextView
+                android:text="Texto Precio"
+                android:textColor="@color/colorAccent"
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvPrecio"
+                app:layout_constraintTop_toBottomOf="@+id/tvIdioma"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="60dp"/>
+
+            <TextView
+                android:id="@+id/tvDescripcion"
+                android:layout_width="297dp"
+                android:layout_height="105dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="60dp"
+                android:maxLines="6"
+                android:text="Descripción"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@id/textView23" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

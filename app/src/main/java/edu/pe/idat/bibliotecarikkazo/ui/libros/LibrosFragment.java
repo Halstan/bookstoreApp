@@ -21,6 +21,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
@@ -47,9 +48,9 @@ public class LibrosFragment extends Fragment {
             @Override
             public void onResponse(Call<List<Libro>> call, Response<List<Libro>> response) {
                 if (response.isSuccessful()){
-                    listLibroAdapter = new ListLibroAdapter(response.body());
-                    //RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getActivity(), 2);
-                    RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
+                    listLibroAdapter = new ListLibroAdapter(getActivity(),response.body());
+                    RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getActivity(), 2);
+                    //RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
                     recyclerView.addItemDecoration(new DividerItemDecoration(Objects.requireNonNull(getActivity()), LinearLayoutManager.VERTICAL));
                     recyclerView.setAdapter(listLibroAdapter);
                     recyclerView.setLayoutManager(layoutManager);
@@ -59,7 +60,8 @@ public class LibrosFragment extends Fragment {
 
             @Override
             public void onFailure(@NotNull Call<List<Libro>> call, @NotNull Throwable t) {
-                Log.e("LIBROS", "onFailure: " + t.getMessage());
+                //Log.e("LIBROS", "onFailure: " + Arrays.toString(t.getStackTrace()));
+                System.out.println(Arrays.toString(t.getStackTrace()));
             }
         });
     }

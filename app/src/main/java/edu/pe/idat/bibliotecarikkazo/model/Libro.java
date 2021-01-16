@@ -31,6 +31,10 @@ public class Libro {
 
     private Autor autor;
 
+    private Editorial editorial;
+
+    private Categoria categoria;
+
     private Idioma idioma;
 
 }
