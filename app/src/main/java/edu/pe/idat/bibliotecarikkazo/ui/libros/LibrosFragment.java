@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -38,6 +39,7 @@ public class LibrosFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().hide();
         recyclerView = view.findViewById(R.id.recyclerView);
         getLibros();
     }
@@ -54,14 +56,13 @@ public class LibrosFragment extends Fragment {
                     recyclerView.addItemDecoration(new DividerItemDecoration(Objects.requireNonNull(getActivity()), LinearLayoutManager.VERTICAL));
                     recyclerView.setAdapter(listLibroAdapter);
                     recyclerView.setLayoutManager(layoutManager);
-                } else Log.e("LIBROS", " onResponse: " + response.errorBody());
+                } else Log.e("LIBROS", " onError: " + response.errorBody());
 
             }
 
             @Override
             public void onFailure(@NotNull Call<List<Libro>> call, @NotNull Throwable t) {
-                //Log.e("LIBROS", "onFailure: " + Arrays.toString(t.getStackTrace()));
-                System.out.println(Arrays.toString(t.getStackTrace()));
+                Log.e("LIBROS", "onFailure: " + t.getLocalizedMessage());
             }
         });
     }

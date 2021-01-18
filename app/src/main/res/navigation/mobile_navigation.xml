@@ -22,4 +22,18 @@
             android:name="edu.pe.idat.bibliotecarikkazo.ui.notifications.NotificationsFragment"
             android:label="@string/title_perfil"
             tools:layout="@layout/fragment_notifications"/>
+
+    <fragment
+        android:id="@+id/navigation_aboutus"
+        android:name="edu.pe.idat.bibliotecarikkazo.ui.aboutUs.AboutUsFragment"
+        android:label="Nosotros"
+        tools:layout="@layout/fragment_about_us"
+        />
+
+    <fragment
+        android:id="@+id/navigation_autores"
+        android:name="edu.pe.idat.bibliotecarikkazo.ui.autores.autorFragment"
+        android:label="Autores"
+        tools:layout="@layout/fragment_autor"
+        />
 </navigation>

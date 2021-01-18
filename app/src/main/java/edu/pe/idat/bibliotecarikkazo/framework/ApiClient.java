@@ -1,9 +1,6 @@
 package edu.pe.idat.bibliotecarikkazo.framework;
 
-import edu.pe.idat.bibliotecarikkazo.service.AlquilerService;
-import edu.pe.idat.bibliotecarikkazo.service.LibroService;
-import edu.pe.idat.bibliotecarikkazo.service.LoginService;
-import edu.pe.idat.bibliotecarikkazo.service.UsuarioService;
+import edu.pe.idat.bibliotecarikkazo.service.*;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
@@ -43,6 +40,11 @@ public class ApiClient {
     public static UsuarioService usuarioService(){
 
         return getretrofit().create(UsuarioService.class);
+    }
+
+    public static AutorService autorService(){
+
+        return getretrofit().create(AutorService.class);
     }
 
 }

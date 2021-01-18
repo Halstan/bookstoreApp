@@ -33,9 +33,9 @@ public class ListLibroAdapter extends RecyclerView.Adapter<ListLibroAdapter.View
         public ViewHolder(@NonNull @NotNull View itemView) {
             super(itemView);
 
-            portadaImageView = itemView.findViewById(R.id.portadaImageView);
-            nombreTextView = itemView.findViewById(R.id.nombreTextView);
-            autorTextView = itemView.findViewById(R.id.autorTextView);
+            portadaImageView = itemView.findViewById(R.id.fotoImageView);
+            nombreTextView = itemView.findViewById(R.id.nombreAutorTextView);
+            autorTextView = itemView.findViewById(R.id.fechaNacTextView);
             estadoTextView = itemView.findViewById(R.id.estadoTextView);
             
             itemView.setOnClickListener(new View.OnClickListener() {
@@ -49,7 +49,6 @@ public class ListLibroAdapter extends RecyclerView.Adapter<ListLibroAdapter.View
                         intent.putExtra("image", libros.get(pos).getUrlPortada());
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         mContext.startActivity(intent);
-                        Toast.makeText(v.getContext(), "Has clickeado " + clickedDataItem.getNombreLibro(), Toast.LENGTH_SHORT).show();
                     }
                 }
             });

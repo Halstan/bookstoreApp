@@ -7,6 +7,12 @@
             android:title="@string/title_libros"/>
 
     <item
+        android:id="@+id/navigation_autores"
+        android:icon="@drawable/autor"
+        android:title="@string/Autores"
+        />
+
+    <item
             android:id="@+id/navigation_dashboard"
             android:icon="@drawable/ic_baseline_list_alt_24"
             android:title="@string/title_prestamos"/>
@@ -15,5 +21,11 @@
             android:id="@+id/navigation_notifications"
             android:icon="@drawable/ic_baseline_person_24"
             android:title="@string/title_perfil"/>
+
+    <item
+        android:id="@+id/navigation_aboutus"
+        android:icon="@drawable/ic_baseline_contact_phone_24"
+        android:title="@string/title_aboutus"
+        />
 
 </menu>

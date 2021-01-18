@@ -9,7 +9,7 @@
     android:layout_margin="20dp">
 
     <ImageView
-        android:id="@+id/portadaImageView"
+        android:id="@+id/fotoImageView"
         android:layout_width="96dp"
         android:layout_height="133dp"
         android:scaleType="fitXY"
@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
     <TextView
-        android:id="@+id/nombreTextView"
+        android:id="@+id/nombreAutorTextView"
         android:layout_width="162dp"
         android:layout_height="35dp"
         android:text="@string/app_name"
@@ -27,19 +27,19 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/portadaImageView"
+        app:layout_constraintTop_toBottomOf="@+id/fotoImageView"
         android:layout_marginTop="5dp"
         android:textAlignment="center"
         />
     <TextView
-        android:id="@+id/autorTextView"
+        android:id="@+id/fechaNacTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textColor="@color/colorAccent"
         android:ellipsize="end"
         android:maxLines="4"
         android:text="@string/app_name"
-        app:layout_constraintTop_toBottomOf="@+id/nombreTextView"
+        app:layout_constraintTop_toBottomOf="@+id/nombreAutorTextView"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,7 +53,7 @@
         android:textColor="@color/colorAccent"
         android:maxLines="4"
         android:text="@string/app_name"
-        app:layout_constraintTop_toBottomOf="@+id/autorTextView"
+        app:layout_constraintTop_toBottomOf="@+id/fechaNacTextView"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
