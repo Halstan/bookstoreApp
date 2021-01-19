@@ -30,7 +30,7 @@
             android:layout_height="match_parent">
 
             <EditText
-                android:id="@+id/editTextTextPersonName"
+                android:id="@+id/editTextNombre"
                 android:layout_width="289dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="25dp"
@@ -46,7 +46,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName2"
+                android:id="@+id/editTextApellido"
                 android:layout_width="289dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="30dp"
@@ -58,10 +58,10 @@
                 android:textColorHint="@color/HintColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+                app:layout_constraintTop_toBottomOf="@+id/editTextNombre" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName3"
+                android:id="@+id/editTextUsername"
                 android:layout_width="289dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="30dp"
@@ -73,10 +73,10 @@
                 android:textColorHint="@color/HintColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+                app:layout_constraintTop_toBottomOf="@+id/editTextApellido" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName4"
+                android:id="@+id/editTextCorreo"
                 android:layout_width="289dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="30dp"
@@ -88,10 +88,10 @@
                 android:textColorHint="@color/HintColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+                app:layout_constraintTop_toBottomOf="@+id/editTextUsername" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName5"
+                android:id="@+id/editTextContrasenha"
                 android:layout_width="289dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="30dp"
@@ -103,10 +103,10 @@
                 android:textColorHint="@color/HintColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
+                app:layout_constraintTop_toBottomOf="@+id/editTextCorreo" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName7"
+                android:id="@+id/editTextConfirmContrasenha"
                 android:layout_width="289dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="30dp"
@@ -118,7 +118,7 @@
                 android:textColorHint="@color/HintColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
+                app:layout_constraintTop_toBottomOf="@+id/editTextContrasenha" />
 
             <TextView
                 android:text="Nombre"
@@ -127,7 +127,7 @@
                 android:id="@+id/textView8"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+                app:layout_constraintBottom_toTopOf="@+id/editTextNombre"
                 android:layout_marginEnd="233dp"
                 android:textColor="@color/colorPrimary"
                 />
@@ -136,7 +136,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView9"
-                app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
+                app:layout_constraintBottom_toTopOf="@+id/editTextApellido"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginEnd="235dp"
@@ -146,7 +146,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView10"
-                app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName3"
+                app:layout_constraintBottom_toTopOf="@+id/editTextUsername"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginEnd="237dp"
@@ -155,7 +155,7 @@
                 android:text="Correo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/textView11"
-                app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName4"
+                app:layout_constraintBottom_toTopOf="@+id/editTextCorreo"
                 app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginEnd="240dp"
                 android:textColor="@color/colorPrimary"/>
@@ -163,7 +163,7 @@
                 android:text="Contraseña"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/textView12"
-                app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName5"
+                app:layout_constraintBottom_toTopOf="@+id/editTextContrasenha"
                 app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginEnd="210dp"
                 android:textColor="@color/colorPrimary"/>
@@ -171,13 +171,13 @@
                 android:text="Vuelva a introducir contraseña"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/textView13"
-                app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName7"
+                app:layout_constraintBottom_toTopOf="@+id/editTextConfirmContrasenha"
                 app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginEnd="90dp"
                 android:textColor="@color/colorPrimary"/>
 
             <Spinner
-                android:id="@+id/spinner"
+                android:id="@+id/cboSexoRegistro"
                 android:layout_width="289dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="30dp"
@@ -185,14 +185,14 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7"
+                app:layout_constraintTop_toBottomOf="@+id/editTextConfirmContrasenha"
                 app:layout_constraintVertical_bias="0.0" />
             <TextView
                 android:text="Sexo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView14"
-                app:layout_constraintBottom_toTopOf="@+id/spinner"
+                app:layout_constraintBottom_toTopOf="@+id/cboSexoRegistro"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginEnd="253dp"
@@ -209,7 +209,7 @@
                 android:text="Cancelar"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/spinner"
+                app:layout_constraintTop_toBottomOf="@+id/cboSexoRegistro"
                 app:layout_constraintVertical_bias="0.0" />
 
             <Button
@@ -225,7 +225,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.714"
                 app:layout_constraintStart_toEndOf="@+id/btnCancelar"
-                app:layout_constraintTop_toBottomOf="@+id/spinner" />
+                app:layout_constraintTop_toBottomOf="@+id/cboSexoRegistro" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>

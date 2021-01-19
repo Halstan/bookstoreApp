@@ -12,4 +12,7 @@ public interface UsuarioService {
     @PUT("/biblioteca/api/usuarios")
     Call<Usuario> updatePerfil(@Body Usuario usuario, @Header("Authorization") String token);
 
+    @POST("/biblioteca/api/usuarios")
+    Call<Usuario> createUsuario(@Body Usuario usuario);
+
 }

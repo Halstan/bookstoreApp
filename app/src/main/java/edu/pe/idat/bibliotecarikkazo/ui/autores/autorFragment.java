@@ -28,6 +28,7 @@ public class autorFragment extends Fragment {
 
     private RecyclerView recyclerView;
     private ListAutorAdapter listAutorAdapter;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

@@ -27,7 +27,6 @@ public class LoginActivity extends AppCompatActivity {
     Button btnLogin;
     EditText txtUsername;
     EditText txtPassword;
-    Usuario usuario;
     CheckBox checkBox;
 
     @Override
@@ -35,7 +34,6 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        usuario = new Usuario();
         txtUsername = findViewById(R.id.etUsuario);
         txtPassword = findViewById(R.id.etPassword);
         webView = findViewById(R.id.btnCrearcuenta);
