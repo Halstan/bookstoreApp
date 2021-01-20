@@ -1,5 +1,7 @@
 package edu.pe.idat.bibliotecarikkazo;
 
+import android.content.Intent;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -11,6 +13,7 @@ import android.os.Bundle;
 import edu.pe.idat.bibliotecarikkazo.framework.ApiClient;
 import edu.pe.idat.bibliotecarikkazo.model.Usuario;
 import edu.pe.idat.bibliotecarikkazo.model.response.LoginResponse;
+import edu.pe.idat.bibliotecarikkazo.utils.Utils;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -40,19 +43,34 @@ public class RegisterActivity extends AppCompatActivity {
         btnRegistrar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+                if (TextUtils.isEmpty(editTextNombre.getText().toString()) || TextUtils.isEmpty(editTextApellido.getText().toString())){
 
+                } else register();
+            }
+        });
+
+        btnCancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
 
     }
 
-    private void register(Usuario usuario){
+    private void register(){
+        Usuario usuario = new Usuario();
+        Utils.setUsuario(usuario, editTextNombre, editTextApellido, editTextUsername, editTextCorreo,
+                editTextContrasenha, editTextConfirmContrasenha, cboSexoRegistro);
         Call<Usuario> usuarioResponse = ApiClient.usuarioService().createUsuario(usuario);
         usuarioResponse.enqueue(new Callback<Usuario>() {
             @Override
             public void onResponse(Call<Usuario> call, Response<Usuario> response) {
                 if (response.isSuccessful()){
-
+                    Usuario usuarioResponse = response.body();
+                    assert usuarioResponse != null;
+                    Toast.makeText(RegisterActivity.this, "Bienvenido: " + usuarioResponse.getNombre()
+                            + " " + usuarioResponse.getApellido(), Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(RegisterActivity.this, "Complete los campos", Toast.LENGTH_SHORT).show();
                 }
@@ -60,9 +78,11 @@ public class RegisterActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<Usuario> call, Throwable t) {
-                Log.e("LIBROS", "onFailure: " + t.getLocalizedMessage());
+                Log.e("REGISTRO", "onFailure: " + t.getLocalizedMessage());
             }
         });
     }
+
+
 
 }

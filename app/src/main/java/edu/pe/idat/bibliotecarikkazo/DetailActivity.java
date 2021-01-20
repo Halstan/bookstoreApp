@@ -63,7 +63,7 @@ public class DetailActivity extends AppCompatActivity {
                     tvCategoria.setText(libro.getCategoria().getNombreCategoria());
                     tvIdioma.setText(libro.getIdioma().getNombreIdioma());
                     if (libro.getPrecio() != null){
-                        tvPrecio.setText(libro.getPrecio().toString());
+                        tvPrecio.setText("S/. " + libro.getPrecio().toString());
                     } else tvPrecio.setText("Gratuito");
                     tvDescripcion.setText(libro.getDescripcion());
                 } else Log.e("LIBRO", " onResponse: " + response.errorBody());

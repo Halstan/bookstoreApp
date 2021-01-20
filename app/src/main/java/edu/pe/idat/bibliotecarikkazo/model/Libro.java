@@ -15,7 +15,7 @@ public class Libro {
 
     private String descripcion;
 
-    private String urlPortada;
+    private String portada;
 
     private String isbn;
 
