@@ -12,9 +12,11 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import edu.pe.idat.bibliotecarikkazo.R;
+import edu.pe.idat.bibliotecarikkazo.RegisterActivity;
 import edu.pe.idat.bibliotecarikkazo.framework.ApiClient;
 import edu.pe.idat.bibliotecarikkazo.model.Rol;
 import edu.pe.idat.bibliotecarikkazo.model.Usuario;
+import edu.pe.idat.bibliotecarikkazo.utils.Utils;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -107,13 +109,8 @@ public class NotificationsFragment extends Fragment {
         Usuario usuario1 = new Usuario();
         usuario1.setIdUsuario(idUsuario);
         usuario1.setRoles(rolesSet);
-        usuario1.setNombre(etNombre.getText().toString());
-        usuario1.setApellido(etApellido.getText().toString());
-        usuario1.setUsername(etUsername.getText().toString());
-        usuario1.setCorreo(etCorreo.getText().toString());
-        usuario1.setContrasenha(etPassword.getText().toString());
-        usuario1.setAsegurarContrasenha(etConfirmPassword.getText().toString());
-        usuario1.setSexo(cboSexo.getSelectedItem().toString());
+        Utils.setUsuario(usuario1, etNombre, etApellido, etUsername, etCorreo
+                , etPassword, etConfirmPassword, cboSexo);
 
         Call<Usuario> usuarioCall = ApiClient.usuarioService().updatePerfil(usuario1, token);
         usuarioCall.enqueue(new Callback<Usuario>() {

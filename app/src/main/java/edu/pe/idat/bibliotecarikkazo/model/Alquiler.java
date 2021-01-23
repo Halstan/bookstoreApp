@@ -1,5 +1,6 @@
 package edu.pe.idat.bibliotecarikkazo.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.ToString;
 

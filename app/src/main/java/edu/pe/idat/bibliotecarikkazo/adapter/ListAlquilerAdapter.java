@@ -12,6 +12,7 @@ import edu.pe.idat.bibliotecarikkazo.R;
 import edu.pe.idat.bibliotecarikkazo.model.Alquiler;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Date;
 import java.util.List;
 
 public class ListAlquilerAdapter extends RecyclerView.Adapter<ListAlquilerAdapter.ViewHolder>{
@@ -41,7 +42,7 @@ public class ListAlquilerAdapter extends RecyclerView.Adapter<ListAlquilerAdapte
             holder.estadoTextView.setText("DEVUELTO");
         }
         Glide.with(holder.itemView)
-                .load(alquiler.getLibro().getUrlPortada())
+                .load(alquiler.getLibro().getPortada())
                 .into(holder.portadaLibroImageView);
     }
 

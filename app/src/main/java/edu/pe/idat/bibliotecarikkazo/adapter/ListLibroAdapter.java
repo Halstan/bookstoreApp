@@ -46,7 +46,7 @@ public class ListLibroAdapter extends RecyclerView.Adapter<ListLibroAdapter.View
                         Libro clickedDataItem = libros.get(pos);
                         Intent intent = new Intent(mContext, DetailActivity.class);
                         intent.putExtra("isbn", libros.get(pos).getIsbn());
-                        intent.putExtra("image", libros.get(pos).getUrlPortada());
+                        intent.putExtra("image", libros.get(pos).getPortada());
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         mContext.startActivity(intent);
                     }
@@ -80,7 +80,7 @@ public class ListLibroAdapter extends RecyclerView.Adapter<ListLibroAdapter.View
             holder.estadoTextView.setText("RESERVADO");
         }
         Glide.with(holder.itemView)
-                .load(p.getUrlPortada())
+                .load(p.getPortada())
                 .into(holder.portadaImageView);
     }
 
