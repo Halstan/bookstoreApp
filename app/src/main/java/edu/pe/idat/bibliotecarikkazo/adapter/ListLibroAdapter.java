@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
@@ -35,7 +34,7 @@ public class ListLibroAdapter extends RecyclerView.Adapter<ListLibroAdapter.View
 
             portadaImageView = itemView.findViewById(R.id.fotoImageView);
             nombreTextView = itemView.findViewById(R.id.nombreAutorTextView);
-            autorTextView = itemView.findViewById(R.id.fechaNacTextView);
+            autorTextView = itemView.findViewById(R.id.autorTextView);
             estadoTextView = itemView.findViewById(R.id.estadoTextView);
             
             itemView.setOnClickListener(new View.OnClickListener() {

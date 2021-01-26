@@ -37,9 +37,9 @@ public class ListAlquilerAdapter extends RecyclerView.Adapter<ListAlquilerAdapte
         holder.nombreLibroTextView.setText(alquiler.getLibro().getNombreLibro());
         holder.usuarioTextView.setText(alquiler.getUsuario().getNombre() + " " + alquiler.getUsuario().getApellido());
         if (alquiler.isEstado()){
-            holder.estadoTextView.setText("ALQUILANDO");
+            holder.estadoTextView.setText("Alquilando");
         } else {
-            holder.estadoTextView.setText("DEVUELTO");
+            holder.estadoTextView.setText("Devuelto");
         }
         Glide.with(holder.itemView)
                 .load(alquiler.getLibro().getPortada())

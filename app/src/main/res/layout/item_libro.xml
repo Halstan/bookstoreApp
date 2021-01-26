@@ -16,7 +16,8 @@
         android:paddingTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="Portada" />
     <TextView
         android:id="@+id/nombreAutorTextView"
         android:layout_width="162dp"
@@ -31,34 +32,36 @@
         android:layout_marginTop="5dp"
         android:textAlignment="center"
         />
+
     <TextView
-        android:id="@+id/fechaNacTextView"
+        android:id="@+id/autorTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorAccent"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="130dp"
         android:ellipsize="end"
         android:maxLines="4"
         android:text="@string/app_name"
-        app:layout_constraintTop_toBottomOf="@+id/nombreAutorTextView"
-        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginEnd="130dp"
-        android:layout_marginStart="130dp"
-        android:textAlignment="center"  />
+        app:layout_constraintTop_toBottomOf="@+id/nombreAutorTextView" />
+
     <TextView
         android:id="@+id/estadoTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorAccent"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="130dp"
         android:maxLines="4"
         android:text="@string/app_name"
-        app:layout_constraintTop_toBottomOf="@+id/fechaNacTextView"
-        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="130dp"
-        android:layout_marginEnd="130dp"
-        android:textAlignment="center"  />
+        app:layout_constraintTop_toBottomOf="@+id/autorTextView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

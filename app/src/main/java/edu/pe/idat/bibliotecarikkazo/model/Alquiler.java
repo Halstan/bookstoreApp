@@ -24,5 +24,7 @@ public class Alquiler {
 
     private DetalleAlquiler detalleAlquiler;
 
-
+    public Alquiler(boolean estado) {
+        this.estado = estado;
+    }
 }

@@ -10,6 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -52,13 +54,19 @@ public class DashboardFragment extends Fragment {
         alquilerResponse.enqueue(new Callback<List<Alquiler>>() {
             @Override
             public void onResponse(Call<List<Alquiler>> call, Response<List<Alquiler>> response) {
-                if (response.isSuccessful()){
-                    listAlquilerAdapter = new ListAlquilerAdapter(response.body());
-                    RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
-                    recyclerView.addItemDecoration(new DividerItemDecoration(Objects.requireNonNull(getActivity()), LinearLayoutManager.VERTICAL));
-                    recyclerView.setAdapter(listAlquilerAdapter);
-                    recyclerView.setLayoutManager(layoutManager);
-                } else Log.e("ALQUILERES", " onResponse: " + response.errorBody());
+                if (response.isSuccessful()) {
+                    if (response.body() != null) {
+                        List<Alquiler> alquileres = response.body();
+                            listAlquilerAdapter = new ListAlquilerAdapter(alquileres);
+                            RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
+                            recyclerView.addItemDecoration(new DividerItemDecoration(Objects.requireNonNull(getActivity()), LinearLayoutManager.VERTICAL));
+                            recyclerView.setAdapter(listAlquilerAdapter);
+                            recyclerView.setLayoutManager(layoutManager);
+
+                    } else {
+                        closeFragment(DashboardFragment.this);
+                    }
+                }
 
             }
 
@@ -67,6 +75,10 @@ public class DashboardFragment extends Fragment {
                 Log.e("ALQUILERES", "onFailure: " + t.getMessage());
             }
         });
+    }
+
+    void closeFragment(Fragment fragment){
+        Objects.requireNonNull(getActivity()).getSupportFragmentManager().beginTransaction().remove(fragment).commit();
     }
 
 }
