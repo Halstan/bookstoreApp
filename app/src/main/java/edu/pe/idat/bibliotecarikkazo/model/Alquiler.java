@@ -18,6 +18,8 @@ public class Alquiler {
 
     private boolean estado;
 
+    private Double precio;
+
     private Usuario usuario;
 
     private Libro libro;

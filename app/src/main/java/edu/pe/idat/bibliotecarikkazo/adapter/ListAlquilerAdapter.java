@@ -12,7 +12,6 @@ import edu.pe.idat.bibliotecarikkazo.R;
 import edu.pe.idat.bibliotecarikkazo.model.Alquiler;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.Date;
 import java.util.List;
 
 public class ListAlquilerAdapter extends RecyclerView.Adapter<ListAlquilerAdapter.ViewHolder>{
@@ -35,7 +34,7 @@ public class ListAlquilerAdapter extends RecyclerView.Adapter<ListAlquilerAdapte
     public void onBindViewHolder(@NonNull @NotNull ListAlquilerAdapter.ViewHolder holder, int position) {
         Alquiler alquiler = alquileres.get(position);
         holder.nombreLibroTextView.setText(alquiler.getLibro().getNombreLibro());
-        holder.usuarioTextView.setText(alquiler.getUsuario().getNombre() + " " + alquiler.getUsuario().getApellido());
+        holder.precioTextView.setText("S/." + alquiler.getPrecio().toString());
         if (alquiler.isEstado()){
             holder.estadoTextView.setText("Alquilando");
         } else {
@@ -55,7 +54,7 @@ public class ListAlquilerAdapter extends RecyclerView.Adapter<ListAlquilerAdapte
 
         private ImageView portadaLibroImageView;
         private TextView nombreLibroTextView;
-        private TextView usuarioTextView;
+        private TextView precioTextView;
         private TextView estadoTextView;
 
         public ViewHolder(@NonNull @NotNull View itemView) {
@@ -63,7 +62,7 @@ public class ListAlquilerAdapter extends RecyclerView.Adapter<ListAlquilerAdapte
 
             portadaLibroImageView = itemView.findViewById(R.id.fotoLibroImageView);
             nombreLibroTextView = itemView.findViewById(R.id.nombreLibroTextView);
-            usuarioTextView = itemView.findViewById(R.id.usuarioTextView);
+            precioTextView = itemView.findViewById(R.id.precioTextView);
             estadoTextView = itemView.findViewById(R.id.estadoTextView);
 
         }

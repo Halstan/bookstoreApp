@@ -74,9 +74,9 @@ public class ListLibroAdapter extends RecyclerView.Adapter<ListLibroAdapter.View
         holder.nombreTextView.setText(p.getNombreLibro());
         holder.autorTextView.setText(p.getAutor().getNombreAutor() + " " + p.getAutor().getApellido());
         if (p.isEstado()){
-            holder.estadoTextView.setText("DISPONIBLE");
+            holder.estadoTextView.setText("Disponible");
         } else {
-            holder.estadoTextView.setText("RESERVADO");
+            holder.estadoTextView.setText("Reservada");
         }
         Glide.with(holder.itemView)
                 .load(p.getPortada())

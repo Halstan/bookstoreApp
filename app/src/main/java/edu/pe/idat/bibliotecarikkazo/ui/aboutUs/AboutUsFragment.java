@@ -13,6 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import edu.pe.idat.bibliotecarikkazo.R;
 
+import java.util.Objects;
+
 public class AboutUsFragment extends Fragment {
 
     private Button btnMaps;
@@ -25,7 +27,7 @@ public class AboutUsFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW);
-                mapIntent.setData(Uri.parse("geo:0,0?q=-12.066887, -77.035825(IDAT-Lima Centro)"));
+                mapIntent.setData(Uri.parse("geo:0,0?q=-12.156932533897006, -76.98106929976343(IDAT - SJM)"));
                 mapIntent.setPackage("com.google.android.apps.maps");
                     startActivity(mapIntent);
 

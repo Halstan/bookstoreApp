@@ -24,6 +24,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -55,8 +56,8 @@ public class DashboardFragment extends Fragment {
             @Override
             public void onResponse(Call<List<Alquiler>> call, Response<List<Alquiler>> response) {
                 if (response.isSuccessful()) {
-                    if (response.body() != null) {
                         List<Alquiler> alquileres = response.body();
+                    if (alquileres != null) {
                             listAlquilerAdapter = new ListAlquilerAdapter(alquileres);
                             RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
                             recyclerView.addItemDecoration(new DividerItemDecoration(Objects.requireNonNull(getActivity()), LinearLayoutManager.VERTICAL));
@@ -64,7 +65,8 @@ public class DashboardFragment extends Fragment {
                             recyclerView.setLayoutManager(layoutManager);
 
                     } else {
-                        closeFragment(DashboardFragment.this);
+                        alquileres = new ArrayList<>();
+                        listAlquilerAdapter = new ListAlquilerAdapter(alquileres);
                     }
                 }
 
@@ -75,10 +77,6 @@ public class DashboardFragment extends Fragment {
                 Log.e("ALQUILERES", "onFailure: " + t.getMessage());
             }
         });
-    }
-
-    void closeFragment(Fragment fragment){
-        Objects.requireNonNull(getActivity()).getSupportFragmentManager().beginTransaction().remove(fragment).commit();
     }
 
 }

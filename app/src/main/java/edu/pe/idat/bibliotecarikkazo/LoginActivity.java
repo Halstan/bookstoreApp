@@ -57,7 +57,6 @@ public class LoginActivity extends AppCompatActivity {
                 if (TextUtils.isEmpty(txtUsername.getText().toString()) || TextUtils.isEmpty(txtPassword.getText().toString())) {
                     Toast.makeText(LoginActivity.this, "Complete los campos", Toast.LENGTH_SHORT).show();
                 } else {
-                    // LOGUEAR
                     LoginActivity.this.login();
                 }
             }

@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="#1E1E1E"
     android:layout_margin="20dp">
@@ -18,10 +18,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:contentDescription="Portada" />
+
     <TextView
         android:id="@+id/nombreAutorTextView"
-        android:layout_width="162dp"
-        android:layout_height="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/app_name"
         android:textColor="@color/colorPrimary"
         android:textSize="15sp"
@@ -35,33 +36,34 @@
 
     <TextView
         android:id="@+id/autorTextView"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="130dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="130dp"
-        android:ellipsize="end"
+        android:textColor="@color/colorAccent"
         android:maxLines="4"
         android:text="@string/app_name"
-        android:textAlignment="center"
-        android:textColor="@color/colorAccent"
+        app:layout_constraintTop_toBottomOf="@+id/nombreAutorTextView"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombreAutorTextView" />
+        android:layout_marginEnd="130dp"
+        android:layout_marginStart="130dp"
+        android:textAlignment="center"/>
 
     <TextView
         android:id="@+id/estadoTextView"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="130dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="130dp"
-        android:maxLines="4"
-        android:text="@string/app_name"
-        android:textAlignment="center"
         android:textColor="@color/colorAccent"
+        android:maxLines="4"
+        android:paddingBottom="15dp"
+        android:text="@string/app_name"
+        app:layout_constraintTop_toBottomOf="@+id/autorTextView"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/autorTextView" />
+        android:layout_marginStart="130dp"
+        android:layout_marginEnd="130dp"
+        android:textAlignment="center"
+        android:layout_marginBottom="10dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
