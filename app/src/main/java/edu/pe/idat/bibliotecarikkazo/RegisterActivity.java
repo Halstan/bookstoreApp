@@ -1,7 +1,5 @@
 package edu.pe.idat.bibliotecarikkazo;
 
-import android.content.Intent;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -12,11 +10,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import edu.pe.idat.bibliotecarikkazo.framework.ApiClient;
 import edu.pe.idat.bibliotecarikkazo.model.Usuario;
-import edu.pe.idat.bibliotecarikkazo.model.response.LoginResponse;
 import edu.pe.idat.bibliotecarikkazo.utils.Utils;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+
+import static edu.pe.idat.bibliotecarikkazo.utils.Utils.validar;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -43,8 +42,8 @@ public class RegisterActivity extends AppCompatActivity {
         btnRegistrar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                if (TextUtils.isEmpty(editTextNombre.getText().toString()) || TextUtils.isEmpty(editTextApellido.getText().toString())){
-
+                if (validarPerfil()){
+                    Toast.makeText(RegisterActivity.this, "Complete los campos", Toast.LENGTH_SHORT).show();
                 } else register();
             }
         });
@@ -83,6 +82,9 @@ public class RegisterActivity extends AppCompatActivity {
         });
     }
 
-
+    private boolean validarPerfil(){
+        return validar(editTextNombre, editTextApellido, editTextNombre, editTextUsername, editTextNombre, editTextCorreo,
+                editTextNombre, editTextContrasenha, editTextConfirmContrasenha, cboSexoRegistro);
+    }
 
 }

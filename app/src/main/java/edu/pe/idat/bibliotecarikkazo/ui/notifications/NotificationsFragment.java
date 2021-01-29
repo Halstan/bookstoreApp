@@ -2,6 +2,7 @@ package edu.pe.idat.bibliotecarikkazo.ui.notifications;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,6 +23,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 import java.util.*;
+
+import static edu.pe.idat.bibliotecarikkazo.utils.Utils.validar;
 
 public class NotificationsFragment extends Fragment {
 
@@ -64,7 +67,9 @@ public class NotificationsFragment extends Fragment {
         btnActualizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                updatePerfil("Bearer " + token);
+                if(validarPerfil()){
+                    updatePerfil("Bearer " + token);
+                } else Toast.makeText(getActivity(), "Complete los campos", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -128,5 +133,12 @@ public class NotificationsFragment extends Fragment {
         });
 
     }
+
+    private boolean validarPerfil(){
+        return validar(etNombre, etApellido, etApellido, etUsername, etUsername, etCorreo,
+                etCorreo, etPassword, etConfirmPassword, cboSexo);
+    }
+
+
 
 }
