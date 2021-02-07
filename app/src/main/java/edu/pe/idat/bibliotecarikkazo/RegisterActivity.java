@@ -43,8 +43,9 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 if (validarPerfil()){
-                    Toast.makeText(RegisterActivity.this, "Complete los campos", Toast.LENGTH_SHORT).show();
-                } else register();
+                    register();
+                    finish();
+                } else Toast.makeText(RegisterActivity.this, "Complete los campos", Toast.LENGTH_SHORT).show();
             }
         });
 

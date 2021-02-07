@@ -44,12 +44,12 @@ public class Utils {
             return false;
         }
 
-        if(!etPassword.getText().equals(etConfirmPassword.getText())){
+        if(cboSexo.getSelectedItem().equals("Seleccione sexo:")){
             return false;
         }
 
-        if(cboSexo.getSelectedItem().equals("Seleccione sexo:")){
-            return false;
+        if(etPassword.getText().equals(etConfirmPassword.getText())){
+            return true;
         }
 
         return true;
