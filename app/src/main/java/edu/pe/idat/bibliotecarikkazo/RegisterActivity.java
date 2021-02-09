@@ -45,7 +45,9 @@ public class RegisterActivity extends AppCompatActivity {
                 if (validarPerfil()){
                     register();
                     finish();
-                } else Toast.makeText(RegisterActivity.this, "Complete los campos", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(RegisterActivity.this, "Complete los campos", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
